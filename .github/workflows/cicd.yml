@@ -18,6 +18,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn compile
+    - name: Download Dependencies
+      run: mvn dependency:go-offline
 
   security-checks:
       runs-on: ubuntu-latest
